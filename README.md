@@ -32,9 +32,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <p>
 Setup Resources in Azure
--Create the Domain Controller VM (Windows Server 2022) named “DC-1”
--Set Domain Controller’s NIC Private IP address as static (DC-1>Networking>Network Interface>IP Configurations)
--Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group from step 1 and make sure it’s on the same virtual network as DC-1
+- Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+- Set Domain Controller’s NIC Private IP address as static (DC-1>Networking>Network Interface>IP Configurations)
+- Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group from step 1 and make sure it’s on the same virtual network as DC-1
 </p>
 <br />
 
