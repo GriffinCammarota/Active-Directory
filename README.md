@@ -91,29 +91,39 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 
 <p>
-Connect client-1 to the domain
-In azure, we now need to set client-1’s DNS settings to DC-1’s private ip address (virtual machines>client-1>Networking>DNS server)
-Save settings and restart client-1 from azure
-Log back in to client-1 with remote desktop
-Also log in to DC-1 (if you aren’t already) and check to make sure client-1 shows up in “Active Directory Users and Computers” (ADUC) inside the “computers” container in the root of the domain
-Make a new OU named “_CLIENTS” and drag Client-1 into it
+  <dl>
+    <dt>Connect client-1 to the domain</dt>
+    <dd>
+    <li>n azure, we now need to set client-1’s DNS settings to DC-1’s private ip address (virtual machines>client-1>Networking>DNS server)</li>
+    <li>Save settings and restart client-1 from azure</li>
+    <li>Log back in to client-1 with remote desktop</li>
+    <li>Also log in to DC-1 (if you aren’t already) and check to make sure client-1 shows up in “Active Directory Users and Computers” (ADUC) inside the “computers” container in the root of the domain</li>
+    <li>Make a new OU named “_CLIENTS” and drag Client-1 into it</li>
+    </dd>
+    </dl>
 
 </p>
 
 <p>
-Set up Remote Desktop for non-admin users on Client-1
-On client-1,logged in as bart_admin, open “system properties” (system>about>remote desktop)
-Allow “Domain Users” to access the remote desktop
-Normally you’d want to do this in “Group policy” so you can change many systems at once, but since we just need to change one system then we can do it this way
+<dl> 
+  <dt>Set up Remote Desktop for non-admin users on Client-1</dt>
+    <dd>
+    <li>On client-1,logged in as bart_admin, open “system properties” (system>about>remote desktop)</li>
+    <li>Allow “Domain Users” to access the remote desktop</li>
+    <li>Normally you’d want to do this in “Group policy” so you can change many systems at once, but since we just need to change one system then we can do it this way</li>
+    </dd>
+</dl>
 </p>
 
 <p>
-Now we can create (non-admin) users and log in to client-1 with one of them to test it 
-On DC-1 (as bart_admin) open Powershell_ise as administrator
-Create a new file and paste this script (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
-This script will just make a lot of users with random names (I didn’t write the script)
-You can change the number of users if you want so it won’t make 10,000 users
-Choose one of the accounts to test and you should be able to log in (with the password noted in the script)
+  <ul>
+<li>Now we can create (non-admin) users and log in to client-1 with one of them to test it</li>
+<li>On DC-1 (as bart_admin) open Powershell_ise as administrator</li>
+<li>Create a new file and paste this script (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)</li>
+<li>This script will just make a lot of users with random names (I didn’t write the script)</li>
+<li>You can change the number of users if you want so it won’t make 10,000 users</li>
+<li>Choose one of the accounts to test and you should be able to log in (with the password noted in the script)</li>
+  </ul>
 <p>
 
 <br />
