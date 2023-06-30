@@ -19,12 +19,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows 10 (21H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
-
-- Set up Resourses in Azure
-- Check Connectivity Between the Client and the Domain Controller
--  Install Active Directory
-- Create an Admin and Normal User Account in Active Directory
-- Connect client-1 to the Domain
+<ol type="1">
+  <li>Set up Resourses in Azure</li>
+  <li>Check Connectivity Between the Client and the Domain Controller</li>
+  <li>Install Active Directory</li>
+  <li>Create an Admin and Normal User Account in Active Directory</li>
+  <li>Connect client-1 to the Domain</li>
+  </ol>
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -32,10 +33,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Setup Resources in Azure
-- Create the Domain Controller VM (Windows Server 2022) named “DC-1”
-- Set Domain Controller’s NIC Private IP address as static (DC-1>Networking>Network Interface>IP Configurations)
-- Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group from step 1 and make sure it’s on the same virtual network as DC-1
+  <dl>
+    <dt>1.Setup Resources in Azure</dt>
+      <dd>
+        <li>Create the Domain Controller VM (Windows Server 2022) named “DC-1”</li>
+        <li>Set Domain Controller’s NIC Private IP address as static (DC-1>Networking>Network Interface>IP Configurations)</li>
+        <li>Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group from step 1 and make sure it’s on the same virtual network as DC-1</li>
+  </dl>
 </p>
 <br />
 
@@ -43,10 +47,14 @@ Setup Resources in Azure
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Check Connectivity between the client and Domain Controller
-Log in to Client-1 with Remote Desktop and ping DC-1’s private IP address (found in Azure or with ipconfig when logged into DC-1) with ping -t <ip address> (perpetual ping in command prompt)
-Log in to the Domain Controller and enable ICMPv4 in on the local windows Firewall
-Check back at Client-1 to see the ping succeed
+  <dl>
+    <dt>2.Check Connectivity between the client and Domain Controller</dt>
+        <dd>
+        <li>Log in to Client-1 with Remote Desktop and ping DC-1’s private IP address (found in Azure or with ipconfig when logged into DC-1) with ping -t <ip address> (perpetual ping in command prompt)</li>
+        <li>Log in to the Domain Controller and enable ICMPv4 in on the local windows Firewall</li>
+        <li>Check back at Client-1 to see the ping succeed</li>
+        </dd>
+</dl>
 </p>
 <br />
 
@@ -54,10 +62,14 @@ Check back at Client-1 to see the ping succeed
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Install Active Directory
-Log in to DC-1 and install Active Directory Domain Services
-Promote as a DC: Setup a new forest as mydomain.com (the name can be whatever you want)
-Restart and then log back into DC-1 as user: mydomain.com\labuser
+  <dl>
+<dt>Install Active Directory</dt>
+    <dd>
+    <li>Log in to DC-1 and install Active Directory Domain Services</li>
+    <li>Promote as a DC: Setup a new forest as mydomain.com (the name can be whatever you want)</li>
+    <li>Restart and then log back into DC-1 as user: mydomain.com\labuser</li>
+    </dd>
+  </dl>
 </p>
 <br />
 
@@ -65,13 +77,17 @@ Restart and then log back into DC-1 as user: mydomain.com\labuser
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Create an Admin and Normal User Account in Active Directory
-In Active Directory Users and Computers (search for it in the windows search bar), create an Organizational Unit (OU) called “_EMPLOYEES”
-Create a new OU named “_ADMINS”
-Create a new employee. For example “Bart Simpson” (same password) with the username of “bart_admin”
-Add bart_admin to the “Domain Admins” Security Group
-Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\bart_admin”
-bart_admin is your admin account so log in with this now instead of labuser	
+  <dl>
+    <dt>3.Create an Admin and Normal User Account in Active Directory</dt>
+      <dd>
+        <li>In Active Directory Users and Computers (search for it in the windows search bar), create an Organizational Unit (OU) called “_EMPLOYEES”</li>
+        <li>Create a new OU named “_ADMINS”</li>
+        <li>Create a new employee. For example “Bart Simpson” (same password) with the username of “bart_admin”</li>
+        <li>Add bart_admin to the “Domain Admins” Security Group</li>
+        <li>Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\bart_admin”</li>
+        <li>bart_admin is your admin account so log in with this now instead of labuser</li>
+      </dd>
+  </dl>
 </p>
 
 <p>
