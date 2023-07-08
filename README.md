@@ -30,9 +30,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
   <dl>
     <dt>1.Setup Resources in Azure</dt>
       <dd>
@@ -68,7 +65,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6COsheE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   <dl>
@@ -83,7 +80,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/z8YAUNa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   <dl>
@@ -100,6 +97,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 
 <p>
+<img src="https://i.imgur.com/t2C86P6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
   <dl>
     <dt>Connect client-1 to the domain</dt>
     <dd>
@@ -114,6 +114,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 
 <p>
+<img src="https://i.imgur.com/BNKFhSw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 <dl> 
   <dt>Set up Remote Desktop for non-admin users on Client-1</dt>
     <dd>
@@ -124,6 +127,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </dl>
 </p>
 
+<p>
+<img src="https://i.imgur.com/JyEgtUa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 <p>
   <ul>
 <li>Now we can create (non-admin) users and log in to client-1 with one of them to test it</li>
