@@ -44,17 +44,26 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
-<img src="https://imgur.com/wAXDXOk" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wAXDXOk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   <dl>
     <dt>2.Check Connectivity between the client and Domain Controller</dt>
         <dd>
         <li>Log in to Client-1 with Remote Desktop and ping DC-1’s private IP address (found in Azure or with ipconfig when logged into DC-1) with ping -t <ip address> (perpetual ping in command prompt)</li>
+        </dd>
+        </dl>
+          </p>
+          
+          
+<img src="https://i.imgur.com/V2V7QAZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+          <ul>
         <li>Log in to the Domain Controller and enable ICMPv4 in on the local windows Firewall</li>
         <li>Check back at Client-1 to see the ping succeed</li>
-        </dd>
-</dl>
+          </ul>     
 </p>
 <br />
 
